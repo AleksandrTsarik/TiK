@@ -1,0 +1,46 @@
+<section class="training">
+    <div class="training__container">
+        <h2 class="training__title title">Занятия с тренером</h2>
+        <div class="training__subtitle">Наработайте технику под руководством профессионального тренера! Аренда корта
+            входит в стоимость занятия.</div>
+        <div class="training__items">
+            <div class="training__item">
+                <div class="training__name">
+                    Персональная тренировка
+                    <span>1-2 человека</span>
+                </div>
+                <div class="training__price">
+                    5 000 руб./час
+                </div>
+                <div class="training__link">
+                    @@include('../../elements/link/template.html', {
+                    name: 'Записаться на тренировку',
+                    url: '#',
+                    arrow: true
+                    })
+                </div>
+
+            </div>
+            <div class="training__item">
+                <div class="training__name">
+                    Групповая тренировка
+                    <span>От 3х человек</span>
+                </div>
+                <div class="training__price">
+                    6 000 руб./час + 500 руб.
+                    <span>(за каждого дополнительного человека)</span>
+                </div>
+                <div class="training__link">
+                    @@include('../../elements/link/template.html', {
+                    name: 'Записаться на тренировку',
+                    url: '#',
+                    arrow: true
+                    })
+                </div>
+            </div>
+        </div>
+        <div class="training__img">
+            <img src="images/training.jpg" alt="..." loading="lazy">
+        </div>
+    </div>
+</section>

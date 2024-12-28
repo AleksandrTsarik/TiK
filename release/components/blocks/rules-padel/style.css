@@ -1,0 +1,202 @@
+.rules-padel__title {
+  margin-bottom: 50px;
+}
+@media (max-width: 1023px) {
+  .rules-padel__title {
+    margin-bottom: 30px;
+  }
+}
+.rules-padel__items {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "a b c d " "e f g h";
+  gap: 30px;
+}
+@media (max-width: 1023px) {
+  .rules-padel__items {
+        grid-template-areas: "a b" " d c" "f e" "g h";
+  }
+}
+@media (max-width: 767px) {
+  .rules-padel__items {
+        grid-template-areas: "a" "b" "c" "d" "f" "e" "h" "g";
+  }
+}
+
+.rules-padel-item {
+  border-radius: var(--radius_card_small);
+  background-color: var(--secondary);
+  position: relative;
+  overflow: hidden;
+}
+.rules-padel-item__inner {
+  padding: 20px;
+}
+.rules-padel-item__desc {
+  margin-top: 120px;
+  position: relative;
+  z-index: 1;
+}
+.rules-padel-item__ico {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius);
+  padding: 10px;
+  margin-bottom: 65px;
+  background-color: var(--primary);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.rules-padel-item:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: a;
+}
+.rules-padel-item:nth-child(1):after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding-bottom: 100%;
+  background-image: url("../images/card-bg.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  z-index: 0;
+}
+.rules-padel-item:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: b;
+  background-color: var(--primary);
+  color: var(--white);
+}
+.rules-padel-item:nth-child(2) .rules-padel-item__ico {
+  background-color: var(--white);
+}
+.rules-padel-item:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: c;
+}
+.rules-padel-item:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 7;
+  grid-area: d;
+  background-color: var(--primary);
+  color: var(--white);
+}
+.rules-padel-item:nth-child(4) .rules-padel-item__ico {
+  background-color: var(--white);
+}
+.rules-padel-item:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: e;
+  background-color: var(--primary);
+  color: var(--white);
+}
+.rules-padel-item:nth-child(5) .rules-padel-item__ico {
+  background-color: var(--white);
+}
+.rules-padel-item:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: f;
+}
+.rules-padel-item:nth-child(7) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+  grid-area: g;
+  background-color: var(--primary);
+  color: var(--white);
+}
+.rules-padel-item:nth-child(7) .rules-padel-item__ico {
+  background-color: var(--white);
+}
+.rules-padel-item:nth-child(8) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 7;
+  grid-area: h;
+}
+@media (max-width: 1023px) {
+  .rules-padel-item:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .rules-padel-item:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .rules-padel-item:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .rules-padel-item:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .rules-padel-item:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .rules-padel-item:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .rules-padel-item:nth-child(7) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .rules-padel-item:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+}
+@media (max-width: 767px) {
+  .rules-padel-item:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .rules-padel-item:nth-child(2) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .rules-padel-item:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .rules-padel-item:nth-child(4) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .rules-padel-item:nth-child(5) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+  }
+  .rules-padel-item:nth-child(6) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .rules-padel-item:nth-child(7) {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+  }
+  .rules-padel-item:nth-child(8) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+}
+.rules-padel-item__name {
+  font-size: 34px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.rules-padel-item__text {
+  font-family: var(--ff_mulish);
+  font-size: 20px;
+  font-weight: 400;
+}

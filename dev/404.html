@@ -1,0 +1,29 @@
+@@include('components/header/template.html',{"title": 'Главная'})
+
+<section class="page-error">
+    <div class="page-error__container">
+        <div class="page-error__inner">
+            <di class="page-error__title">
+                <span>4</span>
+                <picture>
+                    <img src="images/ball.png" alt="ball">
+                </picture>
+                <span>4</span>
+            </di>
+            <div class="page-error__content">
+                <p>Cтраница не найдена</p>
+                <p>Возможно она была удалена или перенесена на другой адрес</p>
+
+            </div>
+            <div class="page-error__link">
+                @@include('components/elements/link/template.html', {
+                name: 'Вернуться на главную',
+                arrow: true,
+                url: '/',
+                })
+            </div>
+        </div>
+    </div>
+</section>
+
+@@include('components/footer/template.html',{})

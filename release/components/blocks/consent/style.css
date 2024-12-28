@@ -1,0 +1,8 @@
+.consent__title {
+  margin-bottom: 50px;
+}
+@media (max-width: 767px) {
+  .consent__title {
+    margin-bottom: 30px;
+  }
+}

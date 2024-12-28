@@ -1,0 +1,8 @@
+.private__title {
+  margin-bottom: 50px;
+}
+@media (max-width: 767px) {
+  .private__title {
+    margin-bottom: 30px;
+  }
+}

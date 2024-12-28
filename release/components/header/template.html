@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/favicon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon.png" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon/favicon.ico" />
+
+	<link rel="stylesheet" href="libraries/fancybox/fancybox.css" />
+	<link rel="stylesheet" href="libraries/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/all-style.css" />
+	<title>@@title</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" id="header">
+			<div class="header__container">
+				<div class="header__wrapper">
+					<a href="/" class="header__logo" title="logo">
+						<img src="images/logo-big.png" alt="logo">
+					</a>
+					<div class="header__block">
+						<nav class="header__nav">
+							<ul>
+								<li><a href="#">О нас</a></li>
+								<li><a href="#">Услуги</a></li>
+								<li><a href="#">Услуги</a></li>
+							</ul>
+						</nav>
+						<div class="header__info">
+							<a href="tel:+79277555579" class="header__info-phone">+7 (927) 755-55-79</a>
+
+							@@include('../elements/link/template.html', {
+							name: 'Забронировать корт',
+							url: '#',
+							arrow: true
+							})
+
+
+						</div>
+					</div>
+					<div class="header__phone header__phone--mobile">
+						<a href="tel:79998889999">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M7.59427 12.3782C9.54186 14.3284 11.9144 15.8335 13.8478 15.8335C14.7189 15.8335 15.4838 15.5297 16.0928 14.8513C16.447 14.4556 16.6665 13.9963 16.6665 13.5441C16.6665 13.1978 16.539 12.8657 16.2132 12.6396L14.1523 11.184C13.8407 10.9579 13.5716 10.8519 13.3308 10.8519C13.0263 10.8519 12.7501 11.0285 12.4455 11.3324L11.964 11.8058C11.8861 11.8835 11.794 11.9047 11.709 11.9047C11.6028 11.9047 11.5036 11.8694 11.4328 11.8341C11.022 11.615 10.3067 11.0003 9.64101 10.3431C8.98237 9.67889 8.36622 8.97228 8.14667 8.55537C8.11126 8.48471 8.07585 8.38579 8.07585 8.28686C8.07585 8.20207 8.0971 8.11021 8.175 8.03248L8.64951 7.54492C8.95404 7.24107 9.13109 6.96549 9.13109 6.65458C9.13109 6.41433 9.01778 6.15289 8.79823 5.83491L7.35347 3.80693C7.11268 3.48189 6.77274 3.3335 6.40446 3.3335C5.95829 3.3335 5.50503 3.53841 5.10843 3.91292C4.44979 4.54181 4.1665 5.31202 4.1665 6.16702C4.1665 8.10314 5.64667 10.442 7.59427 12.3782Z"
+									fill="white" />
+							</svg>
+						</a>
+					</div>
+					@@include('../elements/menu/template.html',{})
+
+					<div class="burger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+
+
+				</div>
+			</div>
+		</header>
+		<main class="main">

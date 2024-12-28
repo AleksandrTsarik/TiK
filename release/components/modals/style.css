@@ -1,0 +1,65 @@
+.modal {
+  display: none;
+  max-width: 940px;
+  width: 100%;
+}
+.modal .form {
+  background-color: var(--white);
+}
+@media (max-width: 767.98px) {
+  .modal .form {
+    border-radius: 30px;
+  }
+}
+.modal .form__desc {
+  max-width: 540px;
+}
+
+.fancybox__slide {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.fancybox__content {
+  color: var(--black);
+  background: none;
+  padding: 0;
+}
+.fancybox__content > .carousel__button.is-close {
+  padding: 0;
+  top: 40px;
+  right: 40px;
+}
+.fancybox__content > .carousel__button.is-close svg {
+  display: none;
+}
+.fancybox__content > .carousel__button.is-close::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/icons/cross.svg");
+}
+@media (max-width: 479.98px) {
+  .fancybox__content > .carousel__button.is-close::before {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 767.98px) {
+  .fancybox__content > .carousel__button.is-close {
+    top: 20px;
+    right: 20px;
+  }
+}
+.fancybox__content :focus:not(.carousel__button.is-close) {
+  outline: none;
+}
+
+.carousel__button svg {
+  -webkit-filter: none;
+          filter: none;
+}

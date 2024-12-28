@@ -1,0 +1,57 @@
+.modal {
+	display: none;
+	max-width: 940px;
+	width: 100%;
+	.form {
+		background-color: var(--white);
+		@media (max-width: 767.98px) {
+			border-radius: 30px;
+		}
+		&__desc {
+			max-width: 540px;
+		}
+	}
+}
+
+.fancybox__slide {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.fancybox__content {
+	color: var(--black);
+	background: none;
+	padding: 0;
+	& > .carousel__button.is-close {
+		padding: 0;
+		top: 40px;
+		right: 40px;
+		svg {
+			display: none;
+		}
+		&::before {
+			content: "";
+			width: 40px;
+			height: 40px;
+			display: block;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-image: url("../../images/icons/cross.svg");
+			@media (max-width: 479.98px) {
+				width: 30px;
+				height: 30px;
+			}
+		}
+		@media (max-width: 767.98px) {
+			top: 20px;
+			right: 20px;
+		}
+	}
+	& :focus:not(.carousel__button.is-close) {
+		outline: none;
+	}
+}
+.carousel__button svg {
+	filter: none;
+}

@@ -1,0 +1,79 @@
+.contact {
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "a b c" "d d d";
+    gap: 30px;
+    margin-bottom: 50px;
+    @media (max-width: 1023px) {
+      grid-template-areas: "a" "b" "c" "d";
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item {
+    &:nth-child(1) {
+      grid-area: a;
+    }
+    &:nth-child(2) {
+      grid-area: b;
+    }
+    &:nth-child(3) {
+      grid-area: c;
+    }
+    &:nth-child(4) {
+      grid-area: d;
+    }
+  }
+}
+.contact-item {
+  background-color: var(--secondary);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: var(--radius);
+  gap: 10px;
+  @media (max-width: 767px) {
+    align-items: flex-start;
+  }
+  &__ico {
+    background-color: var(--primary);
+    border-radius: var(--radius);
+    height: 50px;
+    flex: 0 0 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 767px) {
+      flex: 0 0 35px;
+      height: 35px;
+    }
+  }
+  &__text {
+    font-size: 20px;
+    font-family: var(--ff_mulish);
+    font-weight: 400;
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.contact-bg {
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    background-image: url("../../../images/strips/strip2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 100%;
+    position: absolute;
+    left: -10%;
+    right: 0;
+    top: -90%;
+    z-index: -1;
+  }
+}

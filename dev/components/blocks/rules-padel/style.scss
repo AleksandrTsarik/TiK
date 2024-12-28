@@ -1,0 +1,114 @@
+.rules-padel {
+  &__title {
+    margin-bottom: 50px;
+    @media (max-width: 1023px) {
+      margin-bottom: 30px;
+    }
+  }
+  &__items {
+    display: grid;
+    //grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "a b c d " "e f g h";
+    gap: 30px;
+    @media (max-width: 1023px) {
+      //grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "a b" " d c" "f e" "g h";
+    }
+    @media (max-width: 767px) {
+      grid-template-areas: "a" "b" "c" "d" "f" "e" "h" "g";
+    }
+  }
+}
+.rules-padel-item {
+  border-radius: var(--radius_card_small);
+  background-color: var(--secondary);
+  position: relative;
+  overflow: hidden;
+  &__inner {
+    padding: 20px;
+  }
+  &__desc {
+    margin-top: 120px;
+    position: relative;
+    z-index: 1;
+  }
+  &__ico {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius);
+    padding: 10px;
+    margin-bottom: 65px;
+    background-color: var(--primary);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  &:nth-child(1) {
+    grid-area: a;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      padding-bottom: 100%;
+      background-image: url("../../../images/card-bg.png");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      z-index: 0;
+    }
+  }
+  &:nth-child(2) {
+    grid-area: b;
+    background-color: var(--primary);
+    color: var(--white);
+    .rules-padel-item__ico {
+      background-color: var(--white);
+    }
+  }
+  &:nth-child(3) {
+    grid-area: c;
+  }
+  &:nth-child(4) {
+    grid-area: d;
+    background-color: var(--primary);
+    color: var(--white);
+    .rules-padel-item__ico {
+      background-color: var(--white);
+    }
+  }
+  &:nth-child(5) {
+    grid-area: e;
+    background-color: var(--primary);
+    color: var(--white);
+    .rules-padel-item__ico {
+      background-color: var(--white);
+    }
+  }
+  &:nth-child(6) {
+    grid-area: f;
+  }
+  &:nth-child(7) {
+    grid-area: g;
+    background-color: var(--primary);
+    color: var(--white);
+    .rules-padel-item__ico {
+      background-color: var(--white);
+    }
+  }
+  &:nth-child(8) {
+    grid-area: h;
+  }
+  &__name {
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+  &__text {
+    font-family: var(--ff_mulish);
+    font-size: 20px;
+    font-weight: 400;
+  }
+}

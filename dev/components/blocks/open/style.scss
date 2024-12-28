@@ -1,0 +1,57 @@
+.open-sport {
+  &__wrapper {
+  }
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    gap: 30px;
+    @media (max-width: 1023px) {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  }
+  &__item {
+    overflow: hidden;
+    border-radius: var(--radius_card);
+    position: relative;
+    z-index: 1;
+    &:first-child {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      @media (max-width: 1023px) {
+        padding: 20px;
+      }
+      &::after {
+        content: "";
+        background-image: url("../../../images/bg-banner.png");
+        background-position: 100% 100%;
+        background-position: left 100% top -100px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        //padding-bottom: 80%;
+        padding-bottom: 100%;
+        z-index: -1;
+        @media (max-width: 575px) {
+          padding-bottom: 130%;
+        }
+      }
+    }
+    &:last-child {
+    }
+  }
+  &__link {
+    margin-top: auto;
+  }
+  &__title {
+    max-width: 90%;
+    @media (max-width: 1023px) {
+      margin-bottom: 60px;
+    }
+  }
+}

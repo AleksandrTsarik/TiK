@@ -1,0 +1,21 @@
+@@include('components/header/template.html',{"title": 'Главная'})
+
+<section class="page-success">
+    <div class="page-success__container">
+        <div class="page-success__inner">
+            <h1 class="page-success__title title">Заявка успешно отправлена</h1>
+            <div class="page-success__text">Наш менеджер свяжется с вами по указанному телефону в&nbsp;самое ближайшее
+                время
+            </div>
+            <div class="page-success__link">
+                @@include('components/elements/link/template.html', {
+                name: 'Вернуться на главную',
+                arrow: true,
+                url: '/',
+                })
+            </div>
+        </div>
+    </div>
+</section>
+
+@@include('components/footer/template.html',{})

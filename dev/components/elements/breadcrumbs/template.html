@@ -1,0 +1,17 @@
+<div class="breadcrumb">
+	<div class="breadcrumb__container">
+		<ul class="breadcrumb__list">
+			<li><a href="/">Главная</a></li>
+			@@if(list) {@@for (let i = 0; i < list.length; i++) { <li>`+list[i]+`</li>}}
+				<li><span>@@page</span></li>
+		</ul>
+	</div>
+</div>
+
+@@if(title) {
+<div class="elem-title">
+	<div class="elem-title__container">
+		<h1 class="title">@@page</h1>
+	</div>
+</div>
+}

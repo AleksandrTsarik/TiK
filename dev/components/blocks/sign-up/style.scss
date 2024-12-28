@@ -1,0 +1,151 @@
+.sign-up {
+  &__wrapper {
+    border: solid 1px var(--border);
+    border-radius: var(--radius_card);
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(250, 250, 250, 0.6);
+    @media (max-width: 767px) {
+      padding: 20px;
+      border-radius: var(--radius_card_small);
+    }
+    // &::after {
+    //   content: "";
+    //   display: block;
+    //   background-image: url("../../../images/strips/strip3.png");
+    //   background-size: cover;
+    //   background-repeat: no-repeat;
+    //   width: 100%;
+    //   padding-bottom: 100%;
+    //   position: absolute;
+    //   top: -100%;
+    //   right: 0;
+    //   z-index: 0;
+    // }
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(--ff_mulish);
+    margin-bottom: 50px;
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
+  }
+  &__form {
+    position: relative;
+    z-index: 5;
+  }
+  &__inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+    @media (max-width: 1023px) {
+      grid-template-columns: 1fr;
+    }
+    @media (max-width: 767px) {
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    input {
+      background-color: var(--secondary);
+      width: 100%;
+      border-radius: var(--radius);
+      color: var(--color_text);
+      font-size: 20px;
+      font-family: var(--ff_mulish);
+      padding: 10px;
+      @media (max-width: 767px) {
+        font-size: 16px;
+      }
+      &::placeholder {
+        color: var(--color_text);
+      }
+    }
+    label {
+      &:last-child {
+        @media (max-width: 767px) {
+          margin-top: 10px;
+        }
+        input {
+          background-color: var(--primary);
+          color: var(--white);
+          transition: 0.3s;
+          &:hover {
+            @media (min-width: 1023px) {
+              background-color: var(--primary_hover);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.sign-up-checkbox {
+  margin-bottom: 50px;
+  &__text {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(--ff_mulish);
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
+  }
+  &__text-link {
+    color: var(--primary) !important;
+    transition: 0.3s;
+    border-bottom: solid 1px transparent;
+    &:hover {
+      @media (min-width: 1032px) {
+        border-color: inherit;
+      }
+    }
+  }
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    @media (max-width: 767px) {
+      align-items: flex-start;
+    }
+  }
+  &__checked {
+    display: block;
+    width: 24px;
+    flex: 0 0 24px;
+    height: 24px;
+    border: solid 1px var(--primary);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+
+    position: relative;
+    &::after {
+      content: "";
+      background-image: url("../../../images/checkced.svg");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      padding-bottom: 50%;
+      width: 100%;
+      opacity: 0;
+    }
+  }
+  &__input:checked ~ &__checked {
+    background-color: var(--primary);
+    &::after {
+      opacity: 1;
+    }
+  }
+}

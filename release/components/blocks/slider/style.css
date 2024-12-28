@@ -1,0 +1,54 @@
+.slider {
+  padding-top: 50px;
+  overflow: visible;
+}
+.slider__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  height: auto;
+}
+.slider__btns {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.slider__btn-prev, .slider__btn-next {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border: 1px solid var(--gray);
+  -webkit-transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-image: url("../images/arrow.svg");
+}
+.slider__btn-prev {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.slider .swiper-wrapper {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.slider .swiper-slide {
+  height: auto;
+  border-radius: var(--radius);
+  overflow: hidden;
+}

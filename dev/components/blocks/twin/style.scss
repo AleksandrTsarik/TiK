@@ -1,0 +1,65 @@
+.twin {
+  &__link {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    @media (max-width: 1023px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item {
+    overflow: hidden;
+    border-radius: var(--radius_card);
+    padding: 40px;
+    min-height: 330px;
+    @media (max-width: 1023px) {
+      min-height: auto;
+    }
+    &:first-child {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+    &:last-child {
+      background-color: var(--secondary);
+
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        background-image: url("../../../images/padel-item.png");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: contain;
+        width: 300px;
+        padding-bottom: 50%;
+        padding-bottom: 265px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        @media (max-width: 767px) {
+          padding-bottom: 150px;
+          width: 200px;
+          right: -30px;
+        }
+      }
+    }
+  }
+  &__text {
+    font-size: 20px;
+    font-family: var(--ff_mulish);
+    font-weight: 400;
+    max-width: 50%;
+    @media (max-width: 1023px) {
+      padding-bottom: 50px;
+    }
+    @media (max-width: 767px) {
+      font-size: 16px;
+      max-width: 65%;
+    }
+  }
+  &__link {
+    @media (max-width: 1023px) {
+      padding-bottom: 60px;
+    }
+  }
+}

@@ -1,0 +1,144 @@
+.training__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+@media (max-width: 1023px) {
+  .training__items {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+.training__item {
+  padding: 40px;
+  border-radius: var(--radius_card);
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+.training__item:first-child {
+  background-color: none;
+}
+.training__item:first-child::after {
+  content: "";
+  display: block;
+  background-image: url("../images/card-bg.png");
+  background-position: 70% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.training__item:last-child {
+  background-color: var(--secondary);
+}
+@media (max-width: 1023px) {
+  .training__item {
+    border-radius: var(--radius_card_small);
+  }
+}
+@media (max-width: 767px) {
+  .training__item {
+    padding: 20px;
+  }
+}
+.training__name {
+  font-size: 34px;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .training__name {
+    font-size: 24px;
+  }
+}
+.training__name span {
+  font-size: 20px;
+  font-family: var(--ff_mulish);
+  margin-top: 15px;
+}
+@media (max-width: 767px) {
+  .training__name span {
+    font-size: 16px;
+  }
+}
+.training__subtitle {
+  margin-bottom: 50px;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: var(--ff_mulish);
+}
+@media (max-width: 767px) {
+  .training__subtitle {
+    font-size: 16px;
+  }
+}
+.training__title {
+  margin-bottom: 50px;
+}
+@media (max-width: 1023px) {
+  .training__title {
+    margin-bottom: 30px;
+  }
+}
+.training__price {
+  color: var(--primary);
+  font-size: 34px;
+  font-weight: 400;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (max-width: 767px) {
+  .training__price {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+}
+.training__price span {
+  font-size: 18px;
+}
+.training__link {
+  position: relative;
+  z-index: 1;
+}
+.training__img {
+  margin-top: 30px;
+}
+@media (max-width: 767px) {
+  .training__img {
+    margin-top: 15px;
+  }
+}

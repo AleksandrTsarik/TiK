@@ -1,0 +1,109 @@
+.menu {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: var(--wight_bold);
+  line-height: 1.2;
+  display: none;
+}
+.menu.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.menu__wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  z-index: 500;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 40px;
+}
+.menu__logo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70px;
+          flex: 0 0 70px;
+  max-width: 70px;
+}
+.menu__logo a {
+  display: block;
+}
+.menu__logo a img {
+  width: auto;
+  height: auto;
+  max-width: 70px;
+}
+.menu__list {
+  margin-top: 40px;
+}
+.menu__list li {
+  font-size: 16px;
+  font-family: var(--ff_mulish);
+  margin-bottom: 20px;
+}
+.menu__list li:last-child {
+  margin-bottom: 0;
+}
+.menu__phone {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+.menu__phone a {
+  color: var(--primary);
+  font-size: 16px;
+  font-family: var(--ff_mulish);
+}
+@media (max-width: 767px) {
+  .menu__phone {
+    margin-top: auto;
+  }
+}
+@media (max-width: 767px) {
+  .menu__more .link {
+    width: 100%;
+  }
+  .menu__more .link__name {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown > a {
+  position: relative;
+  padding-right: 24px;
+}
+.dropdown > a::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/icons/arrow.svg");
+}
+
+.burger.active {
+  z-index: 600;
+}

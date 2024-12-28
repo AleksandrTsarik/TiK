@@ -1,0 +1,112 @@
+.service-banner img {
+  border-radius: var(--radius_card);
+  overflow: hidden;
+}
+@media (max-width: 1023px) {
+  .service-banner img {
+    border-radius: var(--radius_card_small);
+  }
+}
+.service-banner__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+@media (max-width: 1023px) {
+  .service-banner__items {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+.service-banner__title {
+  margin-bottom: 25px;
+}
+.service-banner__text {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: var(--ff_mulish);
+}
+@media (max-width: 767px) {
+  .service-banner__text {
+    font-size: 16px;
+  }
+}
+.service-banner__more {
+  margin-top: 75px;
+}
+@media (max-width: 767px) {
+  .service-banner__more {
+    margin-top: 60px;
+  }
+}
+.service-banner__item {
+  position: relative;
+  overflow: hidden;
+}
+.service-banner__item:first-child {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "a" "b";
+  gap: 30px;
+}
+@media (max-width: 1023px) {
+  .service-banner__item:first-child {
+    gap: 15px;
+  }
+}
+.service-banner__info {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  position: relative;
+  grid-area: a;
+  padding: 40px;
+  border-radius: var(--radius_card);
+  overflow: hidden;
+  height: 100%;
+}
+@media (max-width: 1023px) {
+  .service-banner__info {
+    border-radius: var(--radius_card_small);
+  }
+}
+@media (max-width: 767px) {
+  .service-banner__info {
+    padding: 20px;
+  }
+}
+.service-banner__info::after {
+  content: "";
+  background-image: url("../images/service-banner-bg.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+@media (max-width: 1200px) {
+  .service-banner__info::after {
+    background-size: cover;
+  }
+}
+.service-banner__service-picture {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: b;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+@media (max-width: 1023px) {
+  .service-banner__service-picture {
+    gap: 10px;
+  }
+}

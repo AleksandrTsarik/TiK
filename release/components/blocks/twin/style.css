@@ -1,0 +1,75 @@
+.twin__link {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+@media (max-width: 1023px) {
+  .twin__link {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+.twin__item {
+  overflow: hidden;
+  border-radius: var(--radius_card);
+  padding: 40px;
+  min-height: 330px;
+}
+@media (max-width: 1023px) {
+  .twin__item {
+    min-height: auto;
+  }
+}
+.twin__item:first-child {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.twin__item:last-child {
+  background-color: var(--secondary);
+  position: relative;
+}
+.twin__item:last-child::after {
+  content: "";
+  display: block;
+  background-image: url("../images/padel-item.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  width: 300px;
+  padding-bottom: 50%;
+  padding-bottom: 265px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+@media (max-width: 767px) {
+  .twin__item:last-child::after {
+    padding-bottom: 150px;
+    width: 200px;
+    right: -30px;
+  }
+}
+.twin__text {
+  font-size: 20px;
+  font-family: var(--ff_mulish);
+  font-weight: 400;
+  max-width: 50%;
+}
+@media (max-width: 1023px) {
+  .twin__text {
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .twin__text {
+    font-size: 16px;
+    max-width: 65%;
+  }
+}
+@media (max-width: 1023px) {
+  .twin__link {
+    padding-bottom: 60px;
+  }
+}

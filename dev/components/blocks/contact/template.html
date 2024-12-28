@@ -1,0 +1,46 @@
+<section class="contact @@class">
+    <div class="contact__container">
+        @@if(title) {
+        <h1 class="contact__title title">@@title</h1>
+        }
+
+        <div class="contact__block">
+            <div class="contact__item contact-item">
+                <div class="contact-item__ico">
+                    <picture>
+                        <img src="../../../images/contact/item1.svg" alt="svg">
+                    </picture>
+                </div>
+                <div class="contact-item__text">+7 (927) 755-55-79</div>
+            </div>
+            <div class="contact__item contact-item">
+                <div class="contact-item__ico">
+                    <picture>
+                        <img src="../../../images/contact/item2.svg" alt="svg">
+                    </picture>
+                </div>
+                <div class="contact-item__text">Padel-Sport-Samara@yandex.ru</div>
+            </div>
+            <div class="contact__item contact-item">
+                <div class="contact-item__ico">
+                    <picture>
+                        <img src="../../../images/contact/item3.svg" alt="svg">
+                    </picture>
+                </div>
+                <div class="contact-item__text">ежедневно с 10:00 до 22:00</div>
+            </div>
+            <div class="contact__item contact-item">
+                <div class="contact-item__ico">
+                    <picture>
+                        <img src="../../../images/contact/item4.png" alt="svg">
+                    </picture>
+                </div>
+                <div class="contact-item__text">улица В.А. Кизилова, 8, село Преображенка, сельское поселение Верхняя
+                    Подстепновка, Волжский район, Самарская область</div>
+            </div>
+        </div>
+        <div class="contact__map">
+            @@include('../../elements/map/template.html', {})
+        </div>
+    </div>
+</section>

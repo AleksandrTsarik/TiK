@@ -1,0 +1,31 @@
+@@include('components/header/template.html',{"title": 'Главная'})
+
+@@include('components/elements/breadcrumbs/template.html',{
+list: '',
+page: 'О нас',
+title: false,
+desc: false,
+})
+
+@@include('components/blocks/open/template.html', {})
+@@include('components/blocks/twin/template.html', {})
+
+
+@@include('components/blocks/our-corts/template.html', {})
+@@include('components/blocks/rules-padel/template.html', {})
+@@include('components/blocks/slider/template.html', {
+title: 'Фото клуба'
+})
+
+@@include('components/blocks/sign-up/template.html', {
+title: 'Не упустите возможность стать частью нашего клуба!',
+subtitle: 'Оставьте заявку, наш менеджер свяжется с вами в ближайшее время и ответит на все вопросы'
+})
+
+@@include('components/blocks/contact/template.html', {
+title: 'Как нас найти',
+class: 'contact-bg'
+})
+
+
+@@include('components/footer/template.html',{})

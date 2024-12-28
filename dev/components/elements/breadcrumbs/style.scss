@@ -1,0 +1,51 @@
+.breadcrumb {
+  margin: 20px 0 40px;
+  color: var(--green_2);
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    row-gap: 7px;
+    font-family: var(--ff_mulish);
+    font-size: 20px;
+    font-weight: 400;
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-thumb {
+      background: none;
+    }
+    & > *:not(:first-child) {
+      margin-left: 10px;
+      &::before {
+        content: "/";
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+    & > *:first-child a {
+      position: relative;
+      padding-left: 0;
+      color: var(--border);
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        display: block;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("../images/icons/home.svg");
+      }
+    }
+  }
+}

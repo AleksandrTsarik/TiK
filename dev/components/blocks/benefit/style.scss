@@ -1,0 +1,112 @@
+.benefit {
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__block {
+    display: grid;
+    grid-template-areas: "a b c d" "e e f g";
+    gap: 30px;
+    @media (max-width: 1023px) {
+      grid-template-areas: "a" "b" "c" "d" "d" "e" "f" "g";
+    }
+  }
+}
+.benefit-item {
+  background-color: var(--secondary);
+  border-radius: var(--radius_medium);
+  overflow: hidden;
+  position: relative;
+  &:nth-child(1) {
+    grid-area: a;
+    &::after {
+      content: "";
+      background-image: url("../../../images/card-bg.png");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding-bottom: 100%;
+      z-index: 0;
+    }
+  }
+  &:nth-child(2) {
+    grid-area: b;
+  }
+  &:nth-child(3) {
+    grid-area: c;
+  }
+  &:nth-child(4) {
+    grid-area: d;
+  }
+  &:nth-child(5) {
+    grid-area: e;
+  }
+  &:nth-child(6) {
+    grid-area: f;
+  }
+  &:nth-child(7) {
+    grid-area: g;
+    &::after {
+      content: "";
+      background-image: url("../../../images/card-bg.png");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding-bottom: 100%;
+      z-index: 0;
+    }
+  }
+  &__inner {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  &__ico {
+    background-color: var(--primary);
+    border-radius: 5px;
+    flex: 0 0 50px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &__info {
+    margin-top: auto;
+    position: relative;
+    z-index: 1;
+  }
+  &__name {
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+  &__text {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(--ff_mulish);
+  }
+  &__img {
+    height: 100%;
+    picture {
+      height: 100%;
+      display: block;
+    }
+  }
+}

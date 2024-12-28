@@ -1,0 +1,207 @@
+.service {
+  background-color: var(--secondary);
+  border-radius: var(--radius_card_small);
+  padding: 150px 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  @media (max-width: 767px) {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 15px;
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__subtitle {
+    font-family: var(-ff_mulish);
+    font-size: 20px;
+    margin-bottom: 50px;
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
+  }
+}
+.service-card {
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    @media (max-width: 1023px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item {
+  }
+}
+.service-card-item {
+  border-radius: var(--radius_medium);
+  display: flex;
+  flex-direction: column;
+  &__big {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--white);
+    border-radius: var(--radius_medium);
+    padding: 20px;
+  }
+  &__small {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: var(--radius_medium);
+    margin-top: 10px;
+  }
+  &__img {
+    margin-bottom: 20px;
+    border-radius: var(--radius_medium);
+    overflow: hidden;
+  }
+  &__desc {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  &__name {
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    @media (max-width: 767px) {
+      font-size: 24px;
+    }
+  }
+  &__text {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(-ff_mulish);
+    padding-bottom: 40px;
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+  &__price {
+    color: var(--primary);
+    font-size: 24px;
+    font-weight: 400;
+    &--old {
+      text-decoration: line-through;
+      color: var(--border);
+      font-size: 20px;
+      font-family: var(--ff_mulish);
+    }
+    &--new {
+    }
+  }
+  &__more {
+  }
+}
+.service-padel {
+  margin-top: 30px;
+  background-image: url("../../../images/footer-bg.jpg");
+  background-position: 50% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: var(--radius_card_small);
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 400px 250px auto;
+  gap: 30px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  @media (max-width: 1200px) {
+    grid-template-columns: 300px 250px auto;
+  }
+  @media (max-width: 1023px) {
+    grid-template-columns: 1fr;
+    background-position: 85% 0;
+  }
+  @media (max-width: 767px) {
+    padding: 20px;
+    gap: 20px;
+  }
+  &::after {
+    content: "";
+    display: block;
+    background-image: url("../../../images/ball.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 350px;
+    height: 100%;
+    position: absolute;
+    transform: rotate(0);
+    right: 170px;
+    bottom: -140px;
+    z-index: -0;
+    @media (max-width: 1023px) {
+      right: auto;
+      left: -50px;
+      bottom: -190px;
+      width: 250px;
+    }
+    @media (max-width: 767px) {
+      left: -70px;
+      bottom: -230px;
+    }
+  }
+  &__title {
+    @media (max-width: 767px) {
+      max-width: 80%;
+    }
+  }
+  &__info {
+  }
+  &__text {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(-ff_mulish);
+    @media (max-width: 767px) {
+      margin-bottom: 120px;
+    }
+  }
+  &__price {
+    font-size: 34px;
+    font-weight: 400;
+    color: var(--primary);
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  &__btn {
+    margin-left: auto;
+    position: relative;
+    z-index: 1;
+    @media (max-width: 575px) {
+      width: 100%;
+    }
+  }
+}
+.service-card-item-small {
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .service-card-item__price {
+      margin-bottom: 20px;
+    }
+    .service-card-item__more {
+      width: 100%;
+      a {
+        width: 100%;
+      }
+      .link__name {
+        flex-grow: 1;
+        text-align: center;
+        justify-content: center;
+      }
+    }
+  }
+}
